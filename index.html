@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RGB Atölyesi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <header class="page-header">
+            <h1>RGB'den görsel, görselden RGB</h1>
+            <p>
+                Bir rengin RGB değerlerini gir, o renkle bir görsel oluştur
+                ya da yüklediğin görseldeki renkleri incele.
+            </p>
+        </header>
+
+        <section class="panels">
+            <article class="panel">
+                <h2>1 · RGB'den görsel oluştur</h2>
+                <p>Renk değerlerini ayarla ve görselini oluştur.</p>
+
+                <div class="color-info">
+                    <div class="color-preview" id="colorPreview"></div>
+                    <div>
+                        <p id="rgbText">rgb(230, 90, 40)</p>
+                        <p id="hexText">#e65a28</p>
+                    </div>
+                </div>
+
+                <div class="color-control">
+                    <label for="red">Kırmızı</label>
+                    <input id="red" type="range" min="0" max="255" value="230">
+                    <input id="redNumber" type="number" min="0" max="255" value="230">
+                </div>
+
+                <div class="color-control">
+                    <label for="green">Yeşil</label>
+                    <input id="green" type="range" min="0" max="255" value="90">
+                    <input id="greenNumber" type="number" min="0" max="255" value="90">
+                </div>
+
+                <div class="color-control">
+                    <label for="blue">Mavi</label>
+                    <input id="blue" type="range" min="0" max="255" value="40">
+                    <input id="blueNumber" type="number" min="0" max="255" value="40">
+                </div>
+
+                <button id="createButton">Görsel oluştur</button>
+
+                <div class="image-output" id="imageOutput">
+                    Görsel burada görünecek
+                </div>
+            </article>
+
+            <article class="panel">
+                <h2>2 · Görselden RGB oku</h2>
+                <p>Bir görsel yükle, renklerini incele.</p>
+
+                <label class="upload-box" for="imageUpload">
+                    Görsel seçmek için tıkla
+                </label>
+                <input id="imageUpload" type="file" accept="image/*">
+
+                <div class="image-output" id="uploadedImage">
+                    Yüklediğin görsel burada görünecek
+                </div>
+
+                <div id="colorResults"></div>
+            </article>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
